@@ -151,17 +151,26 @@ module.exports = function (options) {
           exclude: [/\.(spec|e2e)\.ts$/]
         },
 
-        /*
-         * Sass loader (required for Bootstrap 4)
+        /**
+         * To string and css loader support for *.css files (from Angular components)
+         * Returns file content as string
+         *
          */
         {
           test: /\.css$/,
-          use: ['raw-loader']
+          use: ['to-string-loader', 'css-loader'],
+          exclude: [helpers.root('src', 'styles')]
         },
 
+        /**
+         * To string and sass loader support for *.scss files (from Angular components)
+         * Returns compiled css content as string
+         *
+         */
         {
           test: /\.scss$/,
-          use: ['raw-loader', 'sass-loader']
+          use: ['to-string-loader', 'css-loader', 'sass-loader'],
+          exclude: [helpers.root('src', 'styles'), /node_modules/]
         },
 
 
