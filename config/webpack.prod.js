@@ -293,7 +293,7 @@ module.exports = function (env) {
           output: {
             path: helpers.root('dist')
           },
-          postcss: [autoprefixer]
+          postcss: [autoprefixer],
           /**
            * Html loader advanced options
            *

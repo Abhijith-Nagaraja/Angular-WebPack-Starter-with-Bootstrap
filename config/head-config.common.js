@@ -43,7 +43,12 @@ module.exports = {
     /**
      * <link> tags for a Web App Manifest
      */
-    { rel: 'manifest', href: '/assets/manifest.json' }
+    { rel: 'manifest', href: '/assets/manifest.json' },
+
+    /**
+     * Angular Material Icons
+     */
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
   ],
   meta: [
     { name: 'msapplication-TileColor', content: '#00bcd4' },
