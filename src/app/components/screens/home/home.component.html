@@ -1,16 +1,11 @@
-<div>
-    <h1>HOME</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <md-input-container style="width:100%"> <input mdInput placeholder="Long Last Name That Will Be Truncated"> </md-input-container>
-            </div>
-            <div class="col-md-12"> 1 of 2 </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8"> 1 of 3 </div>
-            <div class="col-md-8"> 1 of 3 </div>
-            <div class="col-md-8"> 1 of 3 </div>
+<button (click)="loadModal()"> Click to load Modal </button>
+<div id="confirm" class="modal fade">
+    <div class="modal-dialog confirm">
+        <div class="modal-content">
+            <div class="modal-body"> This operation will delete the URL and the shortenUrl. <br/>Do you want to continue? </div>
+            <div class="modal-footer confirm-footer"> <button data-dismiss="modal" type="button" data-dismiss="modal" class="btn deleteBtn" id="delete"
+                  (click)="deleteURL(id)">Delete</button> <button data-dismiss="modal" type="button" data-dismiss="modal"
+                  class="btn customBtn">Cancel</button> </div>
         </div>
     </div>
 </div>
